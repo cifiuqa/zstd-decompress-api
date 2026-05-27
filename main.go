@@ -44,7 +44,7 @@ func handleDecompress(c *gin.Context) {
 		return
 	}
 
-	decompressed, err := decoder.DecodeAll(compresed, nil)
+	decompressed, err := decoder.DecodeAll(compressed, nil)
 	if err != nil {
 		c.String(http.StatusUnprocessableEntity, "decompression failed: "+err.Error())
 		return
